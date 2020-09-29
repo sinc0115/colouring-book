@@ -53,20 +53,26 @@ table {
 
 
 /* FONTS */
-h1 {
+h1, h2 {
     font-family: 'Fredoka One', cursive;
     font-weight: bold;
-    font-size: 3rem;
     color: white;
     text-align: center;
-    padding: 2rem;
 }
 
+h1 {
+	font-size: 3rem;
+	padding: 2rem;
+}
+h2 {
+    font-size: 1.8rem;
+}
 /* END OF FONTS */
 
 
 body {
-    background-color: rgb(250, 215, 220);
+	background-color: rgb(250, 215, 220);
+	/* cursor: url("images/brush-black-18dp.svg"), auto */
 }
 
 .container {
@@ -74,4 +80,38 @@ body {
     box-shadow: 0 0 10px 10px pink;
     width: 90%;
     margin: 0 auto;
+}
+
+/* COLOR PALETTE */
+.palette {
+	width: 100%;
+	height: 8rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	border: 0.5rem solid white;
+	box-sizing: border-box;
+}
+
+.palette div {
+	width: 100%;
+	height: 100%;
+}
+
+#red {
+	background-color: red;
+}
+#orange {
+	background-color: orange;
+}
+#yellow {
+	background-color: yellow;
+}
+#green {
+	background-color: green;
+}
+#blue {
+	background-color: blue;
+}
+#purple {
+	background-color: purple;
 }
