@@ -83,7 +83,7 @@ body {
 }
 
 /* COLOR PALETTE */
-.palette {
+#palette {
 	width: 100%;
 	height: 8rem;
 	display: grid;
@@ -92,7 +92,7 @@ body {
 	box-sizing: border-box;
 }
 
-.palette div {
+#palette div {
 	width: 100%;
 	height: 100%;
 }
