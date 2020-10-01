@@ -56,7 +56,7 @@ table {
 h1, h2 {
     font-family: 'Fredoka One', cursive;
     font-weight: bold;
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -76,7 +76,7 @@ body {
 }
 
 .container {
-    background-color: hotpink;
+    background-color: white;
     box-shadow: 0 0 10px 10px pink;
     width: 90%;
     margin: 0 auto;
