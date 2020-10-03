@@ -1,5 +1,4 @@
 // // TO DO LIST
-// make color 'pop' from palette when selected
 // make css responsive
 // allow user to save and download image
 // add more images
