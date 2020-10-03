@@ -1,5 +1,4 @@
 // // TO DO LIST
-// make css responsive
 // allow user to save and download image
 // add more images
 
@@ -65,3 +64,7 @@ function changeCursor () {
 
   document.body.style.cursor = $svgCursor
 }
+
+// ///////////////////////
+// SCREEN CAPTURE
+// ///////////////////////

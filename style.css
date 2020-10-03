@@ -158,7 +158,7 @@ svg {
 		grid-template-columns: 1fr 1fr;
 	}
 
-	.paletteBox {
+	#paletteBox {
 		padding: 1rem;
 	}
 }
