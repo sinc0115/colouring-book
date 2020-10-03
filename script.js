@@ -27,14 +27,18 @@ document.body.style.cursor = `url('data:image/svg+xml;utf8,<svg version="1.1" xm
 // ////////////////////////
 // COLOR PALETTE
 // ////////////////////////
-const $palette = document.getElementById('palette')
+const $paletteColor = document.getElementsByClassName('paletteColor')
 
-$palette.addEventListener('click', function (c) {
-  // console.log('click event: ' + c.target.id)
-  proxyGame.selectedColor = c.target.id
-  console.log('proxy: ' + proxyGame.selectedColor)
-  changeCursor()
-})
+for (var i = 0; i < $paletteColor.length; i++) {
+  $paletteColor[i].addEventListener('click', function () {
+    for (var x = 0; x < $paletteColor.length; x++) {
+      $paletteColor[x].classList.remove('selected')
+    }
+    this.classList.add('selected')
+    proxyGame.selectedColor = this.id
+    changeCursor()
+  })
+}
 
 // ////////////////////////
 // PUPPY
@@ -43,13 +47,11 @@ const $puppy = document.querySelector('svg')
 
 $puppy.addEventListener('click', function (c) {
   if (c.target.closest('circle')) {
-    console.log('circle')
     if (c.target.id === 'eyes') {
       console.log('eyes')
     }
     c.target.closest('circle').style.fill = game.selectedColor
   } else if (c.target.closest('path')) {
-    console.log('path')
     c.target.closest('path').style.fill = game.selectedColor
   }
 })
