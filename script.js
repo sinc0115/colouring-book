@@ -45,12 +45,15 @@ const $puppy = document.querySelector('svg')
 
 $puppy.addEventListener('click', function (c) {
   if (c.target.closest('circle')) {
-    if (c.target.id === 'eyes') {
-      console.log('eyes')
-    }
     c.target.closest('circle').style.fill = game.selectedColor
   } else if (c.target.closest('path')) {
     c.target.closest('path').style.fill = game.selectedColor
+  } else if (c.target.closest('ellipse')) {
+    c.target.closest('ellipse').style.fill = game.selectedColor
+  } else if (c.target.closest('ellipse')) {
+    c.target.closest('ellipse').style.fill = game.selectedColor
+  } else if (c.target.closest('rect')) {
+    c.target.closest('rect').style.fill = game.selectedColor
   }
 })
 

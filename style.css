@@ -73,6 +73,10 @@ body {
 	background-color: rgb(250, 215, 220);
 }
 
+main {
+	margin-bottom: 5rem;
+}
+
 .container {
     background-color: white;
     box-shadow: 0 0 10px 10px pink;
@@ -82,7 +86,7 @@ body {
 
 svg {
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto 2rem auto;
 }
 
 /* COLOR PALETTE */
