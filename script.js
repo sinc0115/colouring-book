@@ -41,10 +41,11 @@ for (var i = 0; i < $paletteColor.length; i++) {
 // ////////////////////////
 // BIG IMAGES
 // ////////////////////////
-const $bigImages = document.querySelectorAll('.bigImages')
+const $bigImages = document.querySelectorAll('.big-images')
+console.log($bigImages)
 
 for (var b = 0; b < $bigImages.length; b++) {
-  $bigImages.style.display = 'none'
+  $bigImages[b].style.display = 'none'
 }
 
 // ////////////////////////
