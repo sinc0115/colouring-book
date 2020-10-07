@@ -39,11 +39,20 @@ for (var i = 0; i < $paletteColor.length; i++) {
 }
 
 // ////////////////////////
-// PUPPY
+// BIG IMAGES
 // ////////////////////////
-const $puppy = document.querySelector('svg')
+const $bigImages = document.querySelectorAll('.bigImages')
 
-$puppy.addEventListener('click', function (c) {
+for (var b = 0; b < $bigImages.length; b++) {
+  $bigImages.style.display = 'none'
+}
+
+// ////////////////////////
+// SVG
+// ////////////////////////
+const $svg = document.querySelector('svg')
+
+$svg.addEventListener('click', function (c) {
   if (c.target.closest('circle')) {
     c.target.closest('circle').style.fill = game.selectedColor
   } else if (c.target.closest('path')) {
