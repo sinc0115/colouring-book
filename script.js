@@ -44,10 +44,25 @@ for (var i = 0; i < $paletteColor.length; i++) {
 const $tinyImages = document.querySelector('.tiny-images')
 
 $tinyImages.closest('div').addEventListener('click', function (t) {
-  console.log('howdy')
+  for (var m = 0; m < $svg.length; m++) {
+    $bigImages[m].style.display = 'none'
+  }
   if (t.target.dataset.tiny == 'puppy') {
     console.log('puppy')
     $bigImages[0].style.display = 'block'
+    console.log($svg)
+  } else if (t.target.dataset.tiny == 'cakes') {
+    console.log('cakes')
+    console.log($svg)
+    $bigImages[1].style.display = 'block'
+  } else if (t.target.dataset.tiny == 'dragon') {
+    console.log('dragon')
+    console.log($svg)
+    $bigImages[2].style.display = 'block'
+  } else if (t.target.dataset.tiny == 'flowers') {
+    console.log('flowers')
+    console.log($svg)
+    $bigImages[3].style.display = 'block'
   }
 })
 
@@ -66,21 +81,24 @@ for (var b = 0; b < $bigImages.length; b++) {
 // ////////////////////////
 // SVG
 // ////////////////////////
-const $svg = document.querySelector('svg')
+var $svg = document.querySelectorAll('svg')
 
-$svg.addEventListener('click', function (c) {
-  if (c.target.closest('circle')) {
-    c.target.closest('circle').style.fill = game.selectedColor
-  } else if (c.target.closest('path')) {
-    c.target.closest('path').style.fill = game.selectedColor
-  } else if (c.target.closest('ellipse')) {
-    c.target.closest('ellipse').style.fill = game.selectedColor
-  } else if (c.target.closest('ellipse')) {
-    c.target.closest('ellipse').style.fill = game.selectedColor
-  } else if (c.target.closest('rect')) {
-    c.target.closest('rect').style.fill = game.selectedColor
-  }
-})
+for (var s = 0; s < $svg.length; s++) {
+  $svg[s].addEventListener('click', function (c) {
+    if (c.target.closest('circle')) {
+      c.target.closest('circle').style.fill = game.selectedColor
+    } else if (c.target.closest('path')) {
+      console.log('visible')
+      c.target.closest('path').style.fill = game.selectedColor
+    } else if (c.target.closest('ellipse')) {
+      c.target.closest('ellipse').style.fill = game.selectedColor
+    } else if (c.target.closest('ellipse')) {
+      c.target.closest('ellipse').style.fill = game.selectedColor
+    } else if (c.target.closest('rect')) {
+      c.target.closest('rect').style.fill = game.selectedColor
+    }
+  })
+}
 
 // ///////////////////////
 // CUSTOM CURSOR
