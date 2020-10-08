@@ -47,8 +47,8 @@ $tinyImages.closest('div').addEventListener('click', function (t) {
   for (var m = 0; m < $bigImages.length; m++) {
     $bigImages[m].style.display = 'none'
     console.log($svg[m].childNodes)
-    for (svgChild of $svg[m].childNodes) {
-      for (child of svgChild.childNodes) {
+    for (var svgChild of $svg[m].childNodes) {
+      for (var child of svgChild.childNodes) {
         if (child.nodeName == 'path' || child.nodeName == 'circle' || child.nodeName == 'rect' || child.nodeName == 'ellipse') {
           child.style.fill = 'white'
         }
