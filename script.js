@@ -39,6 +39,19 @@ for (var i = 0; i < $paletteColor.length; i++) {
 }
 
 // ////////////////////////
+// SELECT AN IMAGE
+// ////////////////////////
+const $tinyImages = document.querySelector('.tiny-images')
+
+$tinyImages.closest('div').addEventListener('click', function (t) {
+  console.log('howdy')
+  if (t.target.dataset.tiny == 'puppy') {
+    console.log('puppy')
+    $bigImages[0].style.display = 'block'
+  }
+})
+
+// ////////////////////////
 // BIG IMAGES
 // ////////////////////////
 const $bigImages = document.querySelectorAll('.big-images')
@@ -48,7 +61,7 @@ for (var b = 0; b < $bigImages.length; b++) {
   $bigImages[b].style.display = 'none'
 }
 
-$bigImages[0].style.display = 'block'
+// $bigImages[0].style.display = 'block'
 
 // ////////////////////////
 // SVG
