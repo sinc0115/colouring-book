@@ -44,24 +44,28 @@ for (var i = 0; i < $paletteColor.length; i++) {
 const $tinyImages = document.querySelector('.tiny-images')
 
 $tinyImages.closest('div').addEventListener('click', function (t) {
-  for (var m = 0; m < $svg.length; m++) {
+  for (var m = 0; m < $bigImages.length; m++) {
     $bigImages[m].style.display = 'none'
+    console.log($svg[m].childNodes)
+    for (svgChild of $svg[m].childNodes) {
+      for (child of svgChild.childNodes) {
+        if (child.nodeName == 'path' || child.nodeName == 'circle' || child.nodeName == 'rect' || child.nodeName == 'ellipse') {
+          child.style.fill = 'white'
+        }
+      }
+    }
   }
   if (t.target.dataset.tiny == 'puppy') {
     console.log('puppy')
     $bigImages[0].style.display = 'block'
-    console.log($svg)
   } else if (t.target.dataset.tiny == 'cakes') {
     console.log('cakes')
-    console.log($svg)
     $bigImages[1].style.display = 'block'
   } else if (t.target.dataset.tiny == 'dragon') {
     console.log('dragon')
-    console.log($svg)
     $bigImages[2].style.display = 'block'
   } else if (t.target.dataset.tiny == 'flowers') {
     console.log('flowers')
-    console.log($svg)
     $bigImages[3].style.display = 'block'
   }
 })
@@ -70,13 +74,10 @@ $tinyImages.closest('div').addEventListener('click', function (t) {
 // BIG IMAGES
 // ////////////////////////
 const $bigImages = document.querySelectorAll('.big-images')
-console.log($bigImages)
 
-for (var b = 0; b < $bigImages.length; b++) {
+for (var b = 1; b < $bigImages.length; b++) {
   $bigImages[b].style.display = 'none'
 }
-
-// $bigImages[0].style.display = 'block'
 
 // ////////////////////////
 // SVG
@@ -88,7 +89,6 @@ for (var s = 0; s < $svg.length; s++) {
     if (c.target.closest('circle')) {
       c.target.closest('circle').style.fill = game.selectedColor
     } else if (c.target.closest('path')) {
-      console.log('visible')
       c.target.closest('path').style.fill = game.selectedColor
     } else if (c.target.closest('ellipse')) {
       c.target.closest('ellipse').style.fill = game.selectedColor
