@@ -1,6 +1,7 @@
 // // TO DO LIST
-// allow user to save and download image
-// add more images
+// add header/footer
+// explain project
+// add GrabzIt API
 
 // ////////////////////////
 // GAME OBJECT
@@ -46,7 +47,6 @@ const $tinyImages = document.querySelector('.tiny-images')
 $tinyImages.closest('div').addEventListener('click', function (t) {
   for (var m = 0; m < $bigImages.length; m++) {
     $bigImages[m].style.display = 'none'
-    console.log($svg[m].childNodes)
     for (var svgChild of $svg[m].childNodes) {
       for (var child of svgChild.childNodes) {
         if (child.nodeName == 'path' || child.nodeName == 'circle' || child.nodeName == 'rect' || child.nodeName == 'ellipse') {
@@ -86,17 +86,7 @@ var $svg = document.querySelectorAll('svg')
 
 for (var s = 0; s < $svg.length; s++) {
   $svg[s].addEventListener('click', function (c) {
-    if (c.target.closest('circle')) {
-      c.target.closest('circle').style.fill = game.selectedColor
-    } else if (c.target.closest('path')) {
-      c.target.closest('path').style.fill = game.selectedColor
-    } else if (c.target.closest('ellipse')) {
-      c.target.closest('ellipse').style.fill = game.selectedColor
-    } else if (c.target.closest('ellipse')) {
-      c.target.closest('ellipse').style.fill = game.selectedColor
-    } else if (c.target.closest('rect')) {
-      c.target.closest('rect').style.fill = game.selectedColor
-    }
+    c.target.style.fill = game.selectedColor
   })
 }
 
