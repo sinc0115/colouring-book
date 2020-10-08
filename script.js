@@ -48,6 +48,8 @@ for (var b = 0; b < $bigImages.length; b++) {
   $bigImages[b].style.display = 'none'
 }
 
+$bigImages[0].style.display = 'block'
+
 // ////////////////////////
 // SVG
 // ////////////////////////
