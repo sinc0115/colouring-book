@@ -1,8 +1,3 @@
-// // TO DO LIST
-// add header/footer
-// explain project
-// add GrabzIt API
-
 // ////////////////////////
 // GAME OBJECT
 // ////////////////////////
@@ -100,7 +95,3 @@ function changeCursor () {
 
   document.body.style.cursor = $svgCursor
 }
-
-// ///////////////////////
-// SCREEN CAPTURE
-// ///////////////////////
